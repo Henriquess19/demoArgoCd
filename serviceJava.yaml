@@ -7,6 +7,6 @@ spec:
     app: the-one-pipe  
   ports:
     - protocol: TCP
-      port: 8088
+      port: 80
       targetPort: 8080  
   type: NodePort 

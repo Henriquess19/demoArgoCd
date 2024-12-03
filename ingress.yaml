@@ -3,23 +3,24 @@ kind: Ingress
 metadata:
   name: pipe-services-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/service-ipstream: "true"
 spec:
   rules:
-  - host: localhost
+  - host: example.com
     http:
       paths:
       - path: /dotnet
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: dotnet-pipe-service
             port:
-              number: 8087
+              number: 80
       - path: /java
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: the-one-pipe-service
             port:
-              number: 8088
+              number: 80
+        

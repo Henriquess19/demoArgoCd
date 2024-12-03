@@ -7,6 +7,6 @@ spec:
     app: dotnet-pipe
   ports:
     - protocol: TCP
-      port: 8087 
+      port: 80 
       targetPort: 5000
   type: NodePort
