@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: the-one-pipe-deployment
+  name: hello-world-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: the-one-pipe
+      app: hello-world
   template:
     metadata:
       labels:
-        app: the-one-pipe
+        app: hello-world
     spec:
       containers:
-        - name: the-one-pipe
-          image: henriquess/the-one-pipe:3.0.4
+        - name: hello-world
+          image: gcr.io/google-samples/hello-app:1.0
           ports:
             - containerPort: 8080 

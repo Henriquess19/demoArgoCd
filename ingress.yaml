@@ -6,21 +6,21 @@ metadata:
     nginx.ingress.kubernetes.io/service-ipstream: "true"
 spec:
   rules:
-  - host: example.com
+  - host: demopipe.com
     http:
       paths:
+      - path: /
+        backend:
+          service:
+            serviceName: hello-world-service
+            servicePort: 8080
       - path: /dotnet
-        pathType: ImplementationSpecific
         backend:
           service:
-            name: dotnet-pipe-service
-            port:
-              number: 80
+            serviceName: dotnet-pipe-service
+            servicePort: 8080
       - path: /java
-        pathType: ImplementationSpecific
         backend:
-          service:
-            name: the-one-pipe-service
-            port:
-              number: 80
+          serviceName: the-one-pipe-service
+          servicePort: 8080
         
