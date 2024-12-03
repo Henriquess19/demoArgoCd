@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 8088    # The port that will be exposed by the Service
       targetPort: 8080  # The container port (where the app listens)
-  type: LoadBalancer  # This type will expose the service externally (if supported)
+  type: NodePort  # This type will expose the service externally (if supported)
