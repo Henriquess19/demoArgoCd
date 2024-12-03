@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-pipe-deployment
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: dotnet-pipe
+  template:
+    metadata:
+      labels:
+        app: dotnet-pipe
+    spec:
+      containers:
+        - name: dotnet-pipe
+          image: henriquess/dotnet-pipe:latest  
+          ports:
+            - containerPort: 5000  
