@@ -27,4 +27,3 @@ spec:
           service:
             name: the-one-pipe-service
             port: 8080
-        
