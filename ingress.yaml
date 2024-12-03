@@ -3,13 +3,14 @@ kind: Ingress
 metadata:
   name: pipe-services-ingress
   annotations:
-    nginx.ingress.kubernetes.io/service-ipstream: "true"
+    # nginx.ingress.kubernetes.io/service-ipstream: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: 3ed3-2001-818-e975-8500-564-a193-df48-674b.ngrok-free.app
     http:
       paths:
-      - path: /
+      - path: /hello
         pathType: Prefix
         backend:
           service:
