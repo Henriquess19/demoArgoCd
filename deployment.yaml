@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: the-one-pipe-deployment
+spec:
+  replicas: 1  # You can adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: the-one-pipe
+  template:
+    metadata:
+      labels:
+        app: the-one-pipe
+    spec:
+      containers:
+        - name: the-one-pipe
+          image: henriquess/the-one-pipe:3.0.4  # Docker image
+          ports:
+            - containerPort: 8080  # Expose the container's port 8088
