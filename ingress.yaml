@@ -13,17 +13,18 @@ spec:
         pathType: Prefix
         backend:
           service:
-            serviceName: hello-world-service
-            servicePort: 8080
+            name: hello-world-service
+            port: 8080
       - path: /dotnet
         pathType: Prefix
         backend:
           service:
-            serviceName: dotnet-pipe-service
-            servicePort: 8080
+            name: dotnet-pipe-service
+            port: 8080
       - path: /java
         pathType: Prefix
         backend:
-          serviceName: the-one-pipe-service
-          servicePort: 8080
+          service:
+            name: the-one-pipe-service
+            port: 8080
         
