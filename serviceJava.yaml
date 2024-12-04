@@ -9,6 +9,11 @@ spec:
     - name: http
       protocol: TCP
       port: 8080
-      targetPort: 8080
-      nodePort: 32522
+      targetPort: 5000
+      nodePort: 30000
+    - name: https
+      protocol: TCP
+      port: 8443
+      targetPort: 5000
+      nodePort: 30001
   type: NodePort
