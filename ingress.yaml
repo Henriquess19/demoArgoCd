@@ -10,20 +10,6 @@ spec:
   - host: henriquesspipes.io
     http:
       paths:
-      #- path: /hello
-      #  pathType: Prefix
-      #  backend:
-      #    service:
-      #      name: hello-world-service
-      #      port:
-      #        number: 8080
-      #- path: /dotnet
-      #  pathType: Prefix
-      #  backend:
-      #    service:
-      #      name: dotnet-pipe-service
-      #      port:
-      #       number: 8080
       - path: /java
         pathType: Prefix
         backend:
