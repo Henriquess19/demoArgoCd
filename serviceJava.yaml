@@ -6,14 +6,7 @@ spec:
   selector:
     app: the-one-pipe  
   ports:
-    - name: http
-      protocol: TCP
-      port: 8090
-      targetPort: 5000
-      nodePort: 30000
-    - name: https
-      protocol: TCP
-      port: 8443
-      targetPort: 5000
-      nodePort: 30001
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
   type: NodePort
