@@ -10,13 +10,6 @@ spec:
   - host: henriquesspipes.io
     http:
       paths:
-      - path: /java
-        pathType: Prefix
-        backend:
-          service:
-            name: the-one-pipe-service
-            port:
-              number: 80
       - path: /dotnet
         pathType: Prefix
         backend:
