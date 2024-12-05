@@ -17,14 +17,14 @@ spec:
             name: hello-world-service
             port:
               number: 80
-      - path: /dotnet/api/hello
+      - path: /dotnet
         pathType: Prefix
         backend:
           service:
             name: dotnet-pipe-service
             port:
               number: 80
-      - path: /java/JSPSample-3.0.4
+      - path: /java
         pathType: Prefix
         backend:
           service:
