@@ -3,7 +3,8 @@ kind: Ingress
 metadata:
   name: pipe-services-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
@@ -17,15 +18,15 @@ spec:
             name: hello-world-service
             port:
               number: 80
-      - path: /dotnet
+      - path: /dotnet(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: dotnet-pipe-service
             port:
               number: 80
-      - path: /java
-        pathType: Prefix
+      - path: /java(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: the-one-pipe-service

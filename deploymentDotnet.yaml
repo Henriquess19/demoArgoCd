@@ -16,4 +16,4 @@ spec:
         - name: dotnet-pipe
           image: henriquess/dotnet-pipe:latest  
           ports:
-            - containerPort: 5000  
+            - containerPort: 5000
