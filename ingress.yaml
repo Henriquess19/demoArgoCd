@@ -24,11 +24,11 @@ spec:
           service:
             name: dotnet-pipe-service
             port:
-              number: 8089
+              number: 8088
       - path: /java
         pathType: Prefix
         backend:
           service:
             name: the-one-pipe-service
             port:
-              number: 8089
+              number: 8087
