@@ -11,14 +11,14 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /hello(.*)
+      - path: /hello
         pathType: Prefix
         backend:
           service:
             name: hello-world-service
             port:
               number: 8089
-      - path: /dotnet(.*)
+      - path: /dotnet
         pathType: Prefix
         backend:
           service:
